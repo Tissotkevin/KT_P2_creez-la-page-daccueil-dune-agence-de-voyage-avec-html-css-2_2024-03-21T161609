@@ -53,6 +53,7 @@ body {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -81,7 +82,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-
 /****** Hebergements ***********/
 .hebergements {
     width: auto;
@@ -181,8 +181,9 @@ body {
 .populaires-cards img {
     width: 33%;
     height: 136px;
-    border-top-left-radius: 20px;
+    border-radius: 20px;
     border-bottom-left-radius: 20px;
+    object-fit: cover;
 }
 
 .populaires-cards .card-content {
@@ -206,6 +207,7 @@ body {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
+
 /* Le code ci-dessous correspond à mon code */
 
 header{
@@ -273,6 +275,8 @@ header .right .lleft a:hover {
 header .right .rright a:hover {
     color: #0065fc;
 }
+
+
 .trouver{
     margin: 0;
     padding: 0;
@@ -334,6 +338,7 @@ header .right .rright a:hover {
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
 }
+
 .filter{
     display: flex;
     flex-direction: row;
@@ -400,6 +405,7 @@ background-color: #DEEBFF;
     align-items: center;
     margin-right: 10px;
 }
+
 footer{
     display: flex;
     flex-direction: row;
@@ -434,17 +440,46 @@ footer a {
     color: black;
 }
 
-
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .main-container {
+        width: 100%;
+        max-width: 1024px;
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+
+    .filter{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .filter .top{
+        margin-bottom: 10px;
+        padding-left: 15px;
+    }
+
+    .quatre img {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0  0 ;
+        object-fit: cover;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
-
+    .hebergements-and-populaires1 {
+        flex-direction: column;
+    }
+    .renverse{
+        display: flex;
+        flex-direction: column;
+    }
     .hebergements {
         width: 100%;
     }
@@ -460,7 +495,15 @@ footer a {
         justify-content: space-between;
     }
 
-    .populaires-cards a {
+    .populaires-cards img {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        object-fit: cover;
+    }
+
+    .populaires-cards .card {
         width: 30%;
     }
 
@@ -476,4 +519,258 @@ footer a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+    .main-container {
+        width: 100%;
+        max-width: 767.98px;
+        padding: 0;
+    }
+
+    header {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .left , header .right {
+        height: 50%;
+
+    }
+
+    header .right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header .right div:hover{
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+
+    header .right .lleft .rright{
+        border-top: none;
+
+    }
+
+    header .right .rright ,header .right .lleft {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .search form{
+        margin-left: 20px;
+    }
+    .search form .mid{
+        font-size: larger ;
+    }
+     .search form .bot{
+        display: none;
+        padding: 0 10px;
+        color: #FFFFFF;
+        background: #0065FC;
+        border: 1px solid #0065FC;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    .search form button.bbot{
+        display: block;
+        padding: 0 10px;
+        color: #FFFFFF;
+        background: #0065FC;
+        border: 10px solid #0065FC;
+        border-radius: 15px 15px 15px 15px;
+    }
+    .hebergements section {
+        border-radius: 20px;
+        padding: 30px;
+        box-sizing: border-box;
+        margin: 5px;
+    }
+
+    .filter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter .top{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .filter .bot{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter .clone{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filter .clone div{
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+        margin: 10px ;
+        border: 2px solid rgba(0,0,0,0.1);
+        border-radius: 30px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+
+.hebergements-and-populaires section{
+    background: none;
+    margin-top: 10px;
+}
+.hebergements-and-populaires1 section {
+    background-color: var(--main-bg-color);
+    border-radius:0 ;
+    padding: 30px;
+    margin: 0px;
+}
+.renverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+    .populaires-cards .card {
+        width: 100%;
+    }
+    .populaires-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires-cards img {
+        width: 40%;
+        height: 150px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        object-fit: cover;
+    }
+
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 33px;
+    }
+
+    .populaires-cards .card-content {
+        width: 67%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 20px;
+        padding: 5px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    }
+    .card img {
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .triple{
+        width: 100%;
+        margin: 10px 0;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires-kards{
+        width: 100%;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top: 33px;
+    }
+
+    .populaires-kards img {
+        width: 100%;
+        height: 120px;
+        border-radius: 20px 20px 0  0 ;
+        object-fit: cover;
+    }
+    .kard-content {
+        width: 90%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .activite{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px
+;
+    }
+    .section-title {
+        margin: 0;
+        font-size: 22px;
+        margin-left: 10px;
+    }
+
+    .quatre{
+        width: 100%;
+        margin: 10px 0;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .quatre img {
+        width: 100%;
+        height: 140px;
+        border-radius: 20px 20px 0  0 ;
+        object-fit: cover;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        background: #F2F2F2;
+        margin-top: 25px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
 }

@@ -16,15 +16,14 @@
 
 <body>
     <div class="main-container">
-        <header>
-            <div class=" left">
-                <img src="images/logo/Booki@3x.png" alt="">
-            </div>
-            <div class="right">
-                <div class="lleft"><a href="#section_heberg">Hébergements</a></div>
-                <div class="rright"><a href="#section_activite">Activités</a></div>
-            </div>
+        <header class="header">
+            <img src="./images/logo/Booki.png" class="logo" alt="Le logo du site Booki"/>
+            <nav class="navbar">
+                <a href="#hebergements-and-populaires">Hébergements</a>
+                <a href="#activity">Activités</a>
+            </nav>
         </header>
+
             <h1 class="top">Trouvez votre hébergement pour des vacances de rêve</h1>
             <p class="bot">En plein centre-ville ou en pleine nature</p>
         <section class="search">
@@ -40,19 +39,33 @@
             </form>
         </section>
 
-        <div class="filter">
-            <div class="top">Filtres</div>
-            <div class="bot">
-                <div class="clone">
-                    <div><i class='fas fa-money-bill-wave'></i>  Économique</div>
-                    <div><i class='fas fa-person'></i>  Familial</div>
+    <section class="filtreSection">
+        <div class="filtre">
+            <h3>Filtres</h3>
+    
+            <div class="container-filtres">
+                <div class="filtre-types">
+                    <i class="fas fa-money-bill-wave filtre-icon"></i>
+                    <p class="filtre-text">Économique</p>
                 </div>
-                <div class="clone">
-                    <div><i class='fas fa-heart'></i>  Romantique</div>
-                    <div><i class='fas fa-fire'></i>  Nos pépites</div>
+    
+                <div class="filtre-types">
+                    <i class="fas fa-child filtre-icon"></i>
+                    <p class="filtre-text">Familial</p>
+                </div>
+    
+                <div class="filtre-types">
+                    <i class="fas fa-heart filtre-icon"></i>
+                    <p class="filtre-text">Romantique</p>
+                </div>
+    
+                <div class="filtre-types">
+                    <i class="fa-solid fa-fire filtre-icon"></i>
+                    <p class="filtre-text">Nos pépites</p>
                 </div>
             </div>
         </div>
+    </section>
         <article class="info">
            <i class='fas fa-info'></i>
            <p>Plus de 500 logements sont disponibles dans cette ville</p>

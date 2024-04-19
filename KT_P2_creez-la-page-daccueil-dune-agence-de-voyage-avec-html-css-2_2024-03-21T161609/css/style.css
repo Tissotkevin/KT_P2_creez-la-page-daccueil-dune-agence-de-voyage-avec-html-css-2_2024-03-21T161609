@@ -213,70 +213,39 @@ h1{
 
 /* Le code ci-dessous correspond à mon code */
 
-header{
-    height: 80px;
-    display :flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header img{
-    height: 19px;
-    display :flex;
-    justify-content: space-between;
-    align-items: center;
-    object-fit: cover;
-}
-
-header .right{
-    height: 100%;
-    display :flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-header .right div{
-
-    height: 100%;
+.header {
+    position: relative;
+    top: 15px;
+    left: 0px;
     display: flex;
-    margin: 20px;
-}
-header .right div:hover{
-    border-top: 5px solid #0065FC;
+    justify-content: space-between
 }
 
-header .right .lleft{
-    display: flex;
-    align-items: center;
-
+/* Navbar & Logo */
+.logo {
+    width: 70px;
+    height: auto;
 }
 
-header .right .rright{
-    height: 100%;
-    display :flex;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 20px;
+.navbar a {
+    position: relative; 
+    padding-right: 40px;
+    font-size: 18px;
+    margin-left: 40px;
 }
 
-
-header .right .rright a{
-    text-decoration: none;
-    color: black;
-
-
+.navbar a:hover {
+    color: #0065FC; 
 }
-header .right .lleft a{
-    text-decoration: none;
-    color: black;
 
-}
-header .right .lleft a:hover {
-    color: #0065fc;
-
-}
-header .right .rright a:hover {
-    color: #0065fc;
+.navbar a:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -21px;
+    width: 78%;
+    height: 2px; 
+    background-color: #0065FC;
 }
 
 
@@ -342,52 +311,56 @@ header .right .rright a:hover {
     border-radius: 0px 15px 15px 0px;
 }
 
-.filter{
+.filtre {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
+    gap: 30px;
+    font-weight: bold;
 }
 
-.filter .top{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    margin-right: 15px;
-}
 
-.filter .bot{
+.filtre-types {
     display: flex;
-    flex-direction: row;
-}
-
-.filter .clone{
-    display: flex;
-    flex-direction: row;
-}
-
-.filter .clone div{
-    padding: 8px;
-    border: 2px solid rgba(0,0,0,0.1);
+    align-items: center;
+    gap: 20px;
+    border: 2px #d9d9d9 solid;
     border-radius: 30px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    margin: 0 10px;
-}
-.filter .clone div:hover{
-background-color: #DEEBFF;
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
+.container-filtres {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
-.fa-money-bill-wave, .fa-fire ,.fa-heart ,.fa-person ,.fa-info{
-    color :#0065FC;
-    margin: 0 10px;
+.filtre-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+}
+
+.filtre-types:hover {
+    background-color: #DEEBFF;
+}
+
+.searchResults {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    gap: 10px;
+
+}
+
+.result-icon {
+    color: #0065FC;
+    border: 1px solid #d9d9d9;
+    border-radius: 100%;
+    padding: 10px;
+    
 }
 
 .info{
@@ -455,16 +428,28 @@ footer a {
         box-sizing: border-box;
     }
 
-    .filter{
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
+    header {
+        width: 100%;
     }
 
-    .filter .top{
-        margin-bottom: 10px;
-        padding-left: 15px;
+    .filtre {
+        display: block; 
+        text-align: left; 
+        margin-top: 50px;
     }
+    
+    .container-filtres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+    }
+    
+    .filtre-types {
+    padding-left: 12px; 
+    padding-right: 12px;
+    }
+
 
     .quatre img {
         width: 100%;
@@ -529,47 +514,41 @@ footer a {
     }
 
     header {
-        height: 120px;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        justify-content: center;
-    }
-
-    header .left {
-        display: flex;
         align-items: center;
-        justify-content: center;
     }
 
-    header .left , header .right {
-        height: 50%;
-
-    }
-
-    header .right{
-        width: 100%;
+    .navbar {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-    }
-    header .right div:hover{
-        border-top: none;
-        border-bottom: 2px solid #0065FC;
-    }
-
-
-    header .right .lleft .rright{
-        border-top: none;
-
-    }
-
-    header .right .rright ,header .right .lleft {
-        width: 50%;
-        display: flex;
-        justify-content: center;
         align-items: center;
+        margin-right: 75px;
+        border-bottom: solid 1px #F2F2F2;
+        
+    }
 
+
+    .navbar a {
+        padding-top: 40px;
+        margin-bottom: 20px; 
+        padding-left: 50px;
+        
+        
+    }
+
+    .navbar a:hover::before {
+        content: none; 
+    }
+    .navbar a:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -21px;
+        width: 50vw;
+        height: 2px; 
+        background-color: #0065FC;
     }
     .search form{
         margin-left: 20px;
@@ -601,44 +580,20 @@ footer a {
         margin: 5px;
     }
 
-    .filter{
-        display: flex;
-        flex-direction: column;
-    }
+    .filtre {
+        margin: 20px;
+     }
 
-    .filter .top{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 21px;
-        text-align: center;
-        margin-right: 0;
-    }
+      .container-filtres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-    .filter .bot{
-        display: flex;
-        flex-direction: column;
-    }
 
-    .filter .clone{
-        display: flex;
-        flex-direction: row;
-    }
 
-    .filter .clone div{
-        display: flex;
-        flex-direction: row;
-        padding: 15px;
-        margin: 10px ;
-        border: 2px solid rgba(0,0,0,0.1);
-        border-radius: 30px;
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 17px;
-        line-height: 20px;
-    }
+      .searchResults {
+        margin: 10px;
+           }
 
 
 .hebergements-and-populaires section{

@@ -25,6 +25,9 @@ body {
     padding: 0 50px;
     box-sizing: border-box;
 }
+h1{
+    font-size: 22px;
+}
 
 .section-title {
     margin: 0;

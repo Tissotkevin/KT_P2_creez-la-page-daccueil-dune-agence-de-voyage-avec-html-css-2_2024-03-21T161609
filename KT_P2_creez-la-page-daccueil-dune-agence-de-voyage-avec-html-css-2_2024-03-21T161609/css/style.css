@@ -342,52 +342,40 @@ header .right .rright a:hover {
     border-radius: 0px 15px 15px 0px;
 }
 
-.filter{
+.filtre {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
+    gap: 30px;
+    font-weight: bold;
 }
 
-.filter .top{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    text-align: center;
-    margin-right: 15px;
-}
 
-.filter .bot{
+.filtre-types {
     display: flex;
-    flex-direction: row;
-}
-
-.filter .clone{
-    display: flex;
-    flex-direction: row;
-}
-
-.filter .clone div{
-    padding: 8px;
-    border: 2px solid rgba(0,0,0,0.1);
+    align-items: center;
+    gap: 20px;
+    border: 2px #d9d9d9 solid;
     border-radius: 30px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 20px;
-    margin: 0 10px;
-}
-.filter .clone div:hover{
-background-color: #DEEBFF;
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
+.container-filtres {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
-.fa-money-bill-wave, .fa-fire ,.fa-heart ,.fa-person ,.fa-info{
-    color :#0065FC;
-    margin: 0 10px;
+.filtre-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+}
+
+.filtre-types:hover {
+    background-color: #DEEBFF;
 }
 
 .info{
@@ -455,15 +443,22 @@ footer a {
         box-sizing: border-box;
     }
 
-    .filter{
-        display: flex;
-        flex-direction: column;
-        align-items: baseline;
+    .filtre {
+        display: block; 
+        text-align: left; 
+        margin-top: 50px;
     }
+    
+    .container-filtres {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
 
-    .filter .top{
-        margin-bottom: 10px;
-        padding-left: 15px;
+    }
+    
+    .filtre-types {
+    padding-left: 12px; 
+    padding-right: 12px;
     }
 
     .quatre img {
@@ -601,45 +596,24 @@ footer a {
         margin: 5px;
     }
 
-    .filter{
-        display: flex;
-        flex-direction: column;
-    }
+     /* Filtre */
 
-    .filter .top{
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 21px;
-        text-align: center;
-        margin-right: 0;
-    }
+     .filtre {
+        margin: 20px;
+     }
 
-    .filter .bot{
-        display: flex;
-        flex-direction: column;
-    }
+      .container-filtres {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-    .filter .clone{
-        display: flex;
-        flex-direction: row;
-    }
 
-    .filter .clone div{
-        display: flex;
-        flex-direction: row;
-        padding: 15px;
-        margin: 10px ;
-        border: 2px solid rgba(0,0,0,0.1);
-        border-radius: 30px;
-        font-family: 'Raleway';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 17px;
-        line-height: 20px;
-    }
 
+      .searchResults {
+        margin: 10px;
+           }
+            
+            
 
 .hebergements-and-populaires section{
     background: none;
